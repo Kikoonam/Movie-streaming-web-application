@@ -39,7 +39,7 @@ function Header() {
             
 
             </NavMenu>
-            <UserImg scr=" "/>
+            <UserImg src="https://wimg.ruan8.com/uploadimg/image/20190131/20190131130305_65861.jpg"/>
 
            
         </Nav>
