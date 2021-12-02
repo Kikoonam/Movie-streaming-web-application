@@ -2,7 +2,6 @@
   "name": "movie-stream-web-application",
   "version": "0.1.0",
   "private": true,
-
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -23,5 +22,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "react-scripts": "^4.0.3"
   }
 }
