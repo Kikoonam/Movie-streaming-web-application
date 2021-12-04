@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from "styled-components"
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick'
@@ -72,7 +71,7 @@ height:100;
 //rgb (0 0 0 / 73%) 0px 16px 10px - 10px;
 transition-duration: 300ms;
 
-box-shadow: 20px 20px 20px;
+box-shadow: 0px 15px 20px;
 color: #000000;
 &:hover{
 border: 4px solid rgba(249, 249, 249, 0.8);
