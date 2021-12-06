@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function Header() {
     return (
         <Nav>
-            <Logo src="/images/logo.svg"/>
+            <Logo src="/images/logo.png"/>
             <NavMenu>
 
                 <a>
@@ -60,7 +60,7 @@ overflow-x: hidden;
 `
 
 const Logo = styled.img`
-width:80px;
+width:45px;
 `
 
 const NavMenu = styled.div`
