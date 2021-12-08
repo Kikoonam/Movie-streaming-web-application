@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ImgSlider from './ImgSlider'
 import Viewers from './Viewers'
 import Movies from './Movies'
+import Series from './Series'
 
 
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
             <ImgSlider />
             <Viewers />
             <Movies/>
+            <Series/>
         </Container>
     )
 }

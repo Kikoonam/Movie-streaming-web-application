@@ -1,15 +1,29 @@
 import React from 'react';
+import {Route,Routes} from 'react-router-dom'
+import Layout from "./components/Layout/Layout"
+
 import { Counter } from './features/counter/Counter';
 import './App.css';
-import Header from './components/Header'
-import Home from './components/Home'
-
+import MoviePage from './Pages/MoviePage';
+import HomePage from './Pages/HomePage';
+import SeriesPage from "./Pages/SeriesPage"
+import Header from './components/Layout/Header';
+import WatchListPage from './Pages/WatchListPage';
 function App() {
   return (
-    <div className="App">
-     <Header />
-     <Home/>
-    </div>
+       <div className='App'>
+        <Header/>
+       <Routes>
+         <Route path="/" element={<HomePage/>}/>
+         <Route path ='/Watchlist' element={<WatchListPage/>}/>
+         <Route path ="/Movie" element={<MoviePage/>}/>
+         <Route path ="/Series" element={<SeriesPage/>}/>
+       </Routes>
+       
+       </div>
+  
+
+    
   );
 }
 
