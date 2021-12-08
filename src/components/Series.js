@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-function Movies() {
+function Series() {
   return (
     <Container>
-      <h2>MOVIES</h2>
+      <h2>SERIES</h2>
       <Content>
         <Wrap>
           <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C/scale?width=400&aspectRatio=1.78&format=jpeg" />
         </Wrap>
+
         <Wrap>
           <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C/scale?width=400&aspectRatio=1.78&format=jpeg" />
         </Wrap>
@@ -19,13 +20,11 @@ function Movies() {
           <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6EA416AD3B15FCC1BADC817A932A57FFF707556DB2233FFCB4CFEB7C8EEDE23C/scale?width=400&aspectRatio=1.78&format=jpeg" />
         </Wrap>
       </Content>
-      
-      
     </Container>
   );
 }
 
-export default Movies;
+export default Series;
 
 const Container = styled.div`min-height: calc(100vh - 70px);
 padding: 0 calc(3.5vw + 5px);
@@ -73,5 +72,6 @@ const Wrap = styled.div`
     -webkit-transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
     transition: transform 0.4s;
   }
-`;
+`
+
 
