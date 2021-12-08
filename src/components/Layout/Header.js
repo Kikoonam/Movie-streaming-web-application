@@ -6,7 +6,7 @@ import classes from "./Header.module.css";
 function Header() {
   return (
     <header className= {classes.header}>
-      <img  className = {classes.logo} src="/images/logo.svg" />
+      <img  className = {classes.logo} src="https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png" />
       <nav className={classes.nav}>
         <a >
             <Link to="/">
