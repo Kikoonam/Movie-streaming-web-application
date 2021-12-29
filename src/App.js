@@ -9,13 +9,16 @@ import HomePage from './Pages/HomePage';
 import SeriesPage from "./Pages/SeriesPage"
 import Header from './components/Layout/Header';
 import WatchListPage from './Pages/WatchListPage';
+import LoginPage from './Pages/WatchListPage';
+
 function App() {
   return (
        <div className='App'>
         <Header/>
        <Routes>
-         <Route path="/" element={<HomePage/>}/>
-         <Route path ='/Watchlist' element={<WatchListPage/>}/>
+         <Route path ='/' element={<LoginPage/>}/>
+         <Route path ='/Home' element ={<HomePage/>}/>
+         <Route path ='/WatchList' element={<WatchListPage/>}/>
          <Route path ="/Movie" element={<MoviePage/>}/>
          <Route path ="/Series" element={<SeriesPage/>}/>
        </Routes>

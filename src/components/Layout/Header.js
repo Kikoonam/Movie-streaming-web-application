@@ -9,14 +9,14 @@ function Header() {
       <img  className = {classes.logo} src="https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png" />
       <nav className={classes.nav}>
         <a >
-            <Link to="/">
+            <Link to="/Home">
             <img src="/images/home-icon.svg"></img>
             <span> HOME </span>
             </Link>
         </a>
         
         <a>
-            <Link to='/watchList'>
+            <Link to='/WatchList'>
           <img src="/images/watchlist-icon.svg"></img>
           <span>WATCHLIST</span>
           </Link>
@@ -37,7 +37,9 @@ function Header() {
         </a>
      
       </nav>
+      <Link to='/'>
       <img className={classes.UserImg} src="https://wimg.ruan8.com/uploadimg/image/20190131/20190131130305_65861.jpg" />
+      </Link>
    </header>
   );
 }

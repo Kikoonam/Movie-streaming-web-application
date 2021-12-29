@@ -1,5 +1,6 @@
+import Test from "../components/WatchList"
 function WatchListPage (){
-    return <div>This is WatchList Page</div>
+    return <Test/>
 }
 
 export default WatchListPage
