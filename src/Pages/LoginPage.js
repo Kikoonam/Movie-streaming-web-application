@@ -4,4 +4,4 @@ function LoginPage() {
     return <Login/>
 }
 
-export default Login;
+export default LoginPage;
