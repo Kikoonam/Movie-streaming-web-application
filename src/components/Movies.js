@@ -20,7 +20,6 @@ function Movies() {
         </Wrap>
       </Content>
       
-      
     </Container>
   );
 }

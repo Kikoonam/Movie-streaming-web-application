@@ -37,9 +37,9 @@ function Header() {
         </a>
      
       </nav>
-      <Link to='/'>
-      <img className={classes.UserImg} src="https://wimg.ruan8.com/uploadimg/image/20190131/20190131130305_65861.jpg" />
-      </Link>
+      
+      <a className= {classes.login}>Login</a>
+     
    </header>
   );
 }
