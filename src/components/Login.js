@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Header from "./Layout/Header";
+import Header from "./Header";
 
 function Login(){
     return (
