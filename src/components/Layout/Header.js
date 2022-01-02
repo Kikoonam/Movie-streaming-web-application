@@ -2,8 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import classes from "./Header.module.css";
+import { auth, provider} from "../../firebase";
 
-function Header() {
+function Header(props) {
+
+  const handleAuth = () => {
+    auth
+    .signInWithPopup(provider)
+    .then((result) => {
+      setUser(result.user);
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
+  }
+    
+
   return (
     <header className= {classes.header}>
       <img  className = {classes.logo} src="https://upload.wikimedia.org/wikipedia/commons/1/1e/RPC-JP_Logo.png" />
@@ -38,7 +52,7 @@ function Header() {
      
       </nav>
       
-      <a className= {classes.login}>Login</a>
+      <a className= {classes.login} onClick={handleAuth}>Login</a>
      
    </header>
   );
