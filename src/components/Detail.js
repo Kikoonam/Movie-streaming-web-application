@@ -27,8 +27,6 @@ const Detail = (props) => {
             <img
             alt = { detailData.title }
             src = { detailData.backgroundImg }
-            //src = "https://static3.srcdn.com/wordpress/wp-content/uploads/2021/11/Spider-Man-No-Way-Home-poster.jpg?q=50&fit=crop&w=960&h=500&dpr=1.5"
-            //alt = ""
             />
         </Background>
 
@@ -36,8 +34,6 @@ const Detail = (props) => {
              <img
             alt = { detailData.title }
             src = { detailData.titleImg }
-            //src = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a58a7719-0dcf-4e0b-b7bb-d2b725dbbb8e/deiulh2-e958d335-e034-4117-8cdb-329a9a4e8562.png/v1/fill/w_1430,h_556,strp/spider_man_no_way_home___logo_png_oficial_2021_by_andrewvm_deiulh2-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTU2IiwicGF0aCI6IlwvZlwvYTU4YTc3MTktMGRjZi00ZTBiLWI3YmItZDJiNzI1ZGJiYjhlXC9kZWl1bGgyLWU5NThkMzM1LWUwMzQtNDExNy04Y2RiLTMyOWE5YTRlODU2Mi5wbmciLCJ3aWR0aCI6Ijw9MTQzMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.wLc9rO5SeHn-fjYrQMTMboZEgBvWEi8jmLfIKL0wrEY"
-            //alt = ""
             />
         </ImageTitle>
 
@@ -63,11 +59,7 @@ const Detail = (props) => {
                 </AddList>
             </Controls>
             <Description>
-                {detailData.description}
-                {/*<p>With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. 
-                    When a spell goes wrong, dangerous foes from other worlds start to appear, 
-                    forcing Peter to discover what it truly means to be Spider-Man.</p>
-                */}
+                {detailData.description }
             </Description>
      </ContentMeta>
     </Container>
