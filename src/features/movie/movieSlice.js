@@ -5,7 +5,7 @@ const initialState = {
   newDisney: null,
   original: null,
   trending: null,
-   //Movie:null,
+  allMovie:null,
 };
 
 const movieSlice = createSlice({
@@ -17,8 +17,10 @@ const movieSlice = createSlice({
       state.newDisney = action.payload.newDisney;
       state.original = action.payload.original;
       state.trending = action.payload.trending;
-     // state.Movie = action.payload.Movies;
+      state.allMovie=action.payload.allMovie;
+      
     },
+    
   },
 });
 
@@ -28,6 +30,6 @@ export const selectRecommend = (state) => state.movie.recommend;
 export const selectNewDisney = (state) => state.movie.newDisney;
 export const selectOriginal = (state) => state.movie.original;
 export const selectTrending = (state) => state.movie.trending;
-//export const selectMovie = (state) => state.movie.Movies;
+export const selectAllMovie = (state) => state.movie.allMovie;
 
 export default movieSlice.reducer;
