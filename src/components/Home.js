@@ -7,6 +7,7 @@ import Trending from "./Trending";
 import Viewers from "./Viewers";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import db from "../firebase";
 import { setMovies } from "../features/movie/movieSlice";
 import { selectUserName } from "../features/user/userSlice";
@@ -87,3 +88,4 @@ const Container = styled.main`
 `;
 
 export default Home;
+
