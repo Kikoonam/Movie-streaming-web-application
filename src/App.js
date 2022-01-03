@@ -11,7 +11,7 @@ import SeriesPage from "./Pages/SeriesPage"
 import WatchListPage from './Pages/WatchListPage';
 import LoginPage from './Pages/LoginPage';
 import Header from './components/Layout/Header';
-
+import Detail from "./components/Detail";
 
 
 function App() {
@@ -23,7 +23,10 @@ function App() {
          <Route path ='/Home' element ={<HomePage/>}/>
          <Route path ='/WatchList' element={<WatchListPage/>}/>
          <Route path ="/Movie" element={<MoviePage/>}/>
-         <Route path ="/Series" element={<SeriesPage/>}/>
+         <Route path="/Series" element={<SeriesPage />} />
+              <Route path="/detail/:id"element ={<Detail />} />
+                
+            
          
        </Routes>
        
