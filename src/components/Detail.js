@@ -11,6 +11,7 @@ const Detail = (props) => {
         db.collection('movies').doc(id).get().then((doc) => {
             if(doc.exists){
                 setDetailData(doc.data());
+                console.log('Found a movie successlly');
             }
             else{
                 console.log('no such document in firebase');
