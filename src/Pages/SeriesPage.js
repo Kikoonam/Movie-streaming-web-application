@@ -1,4 +1,3 @@
-
 import Series from "../components/Series"
 
 function SeriesPage (){

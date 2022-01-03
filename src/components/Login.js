@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import Header from "./Header";
+
 
 function Login(){
     return (
         <Container>
-            
         <Content>
-           
             <CTA>
                 <img src="/images/cta-logo-one.svg" alt="" />
                 <SignUp>GET ALL THERE</SignUp>

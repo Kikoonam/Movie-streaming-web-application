@@ -32,7 +32,6 @@ display:grid;
 padding: 30px 0px 26px;
 grid-gap:25px;
 grid-template-columns: repeat(5,minmax(0,1fr));
-
 `
 const Wrap = styled.div`
 margin:0px;
@@ -43,9 +42,6 @@ box-shadow: 0px 8px 14px;
 color: #000000;
 -webkit-transition: all 250ms cubic-bezier(0.25,0.46,0.45,0.94)0s;
 transition: transform 0.4s;
-
-
-
 
 img
 {
@@ -65,16 +61,9 @@ transfrom: scale(1.05);
 border-color: rgba(249, 249, 249, 0.8);
 -webkit-transition: all 250ms cubic-bezier(0.25,0.46,0.45,0.94)0s;
 transition: transform 0.4s;
- 
-
-
-
 
 }
-
-
 }
-
 }
 
 

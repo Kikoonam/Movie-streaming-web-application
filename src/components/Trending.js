@@ -4,24 +4,24 @@ import { useSelector } from "react-redux";
 import { selectTrending } from "../features/movie/movieSlice";
 
 const Trending = (props) => {
-    const movies = useSelector(selectTrending);
+  const movies = useSelector(selectTrending);
 
-    return (
-        <Container>
-            <h4>Trending</h4>
-            <Content>
-                {movies &&
-                    movies.map((movie, key) => (
-                        <Wrap key={key}>
-                            {movie.id}
-                            <Link to={`/detail/` + movie.id}>
-                                <img src={movie.cardImg} alt={movie.title} />
-                            </Link>
-                        </Wrap>
-                    ))}
-            </Content>
-        </Container>
-    );
+  return (
+    <Container>
+      <h4>Trending</h4>
+      <Content>
+        {movies &&
+          movies.map((movie, key) => (
+            <Wrap key={key}>
+              {movie.id}
+              <Link to={`/detail/` + movie.id}>
+                <img src={movie.cardImg} alt={movie.title} />
+              </Link>
+            </Wrap>
+          ))}
+      </Content>
+    </Container>
+  );
 };
 
 const Container = styled.div`
@@ -33,6 +33,7 @@ const Content = styled.div`
   grid-gap: 25px;
   gap: 25px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
