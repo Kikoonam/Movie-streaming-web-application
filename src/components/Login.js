@@ -7,9 +7,7 @@ const Login = (props) => {
         <CTA>
           <CTALogoOne src="/images/cta-logo-one.svg" alt="" />
           <SignUp >GET ALL THERE</SignUp>
-          <Description>
-            Welcome to our website 
-          </Description>
+          
           <CTALogoTwo src="/images/cta-logo-two.png" alt="" />
         </CTA>
         <BgImage />
