@@ -58,6 +58,9 @@ const Detail = (props) => {
                     <span />
                 </AddList>
             </Controls>
+            <Subtitle>
+                { detailData.subTitle }             
+            </Subtitle>
             <Description>
                 {detailData.description }
             </Description>
@@ -199,6 +202,20 @@ span {
         transform: translateX(-8.5px) rotate(0deg);
         width: 2px;
     }
+}
+`;
+
+const Subtitle = styled.div`
+line-height: 1.4;
+font-size: 20px;
+pading: 16px 0px;
+color: rgb(249, 249, 249);
+
+border-radius: 5px;
+margin: 20px;
+
+@media (max-width: 600px) {
+    font-size: 14px
 }
 `;
 
