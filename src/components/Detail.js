@@ -101,8 +101,8 @@ justify-content: flex-start;
 margin: 20px auto;
 height: 30vw;
 min-height: 250px;
-padding-left:10px;
-padding-bottom: 24px;
+padding-left:25px;
+padding-bottom: 25px;
 width: 100%;
 
 img{
@@ -207,7 +207,7 @@ line-height: 1.4;
 font-size: 20px;
 pading: 16px 0px;
 color: rgb(249, 249, 249);
-background-color: rgba(0, 0, 0, 0.5);
+
 border-radius: 5px;
 margin: 20px;
 
