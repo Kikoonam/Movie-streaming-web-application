@@ -53,10 +53,6 @@ const Detail = (props) => {
                      />
                      <span>Trailer</span>
                 </Trailer>
-                <AddList>
-                    <span />
-                    <span />
-                </AddList>
             </Controls>
             <Subtitle>
                 { detailData.subTitle }             
@@ -168,41 +164,6 @@ const Trailer = styled(Player)`
 background: rgb(0, 0, 0.3);
 border: 1px solid rgb(249, 249, 249);
 color: rgb(249, 249, 249);
-`;
-
-const AddList = styled.div`
-margin-right: 16px;
-height: 44px;
-width: 44px;
-display: flex;
-justify-content; center;
-align-items: center;
-background-color: rgba(0, 0, 0, 0.5);
-border-radius: 50%;
-border: 2px solid white;
-cursor: pointer;
-
-&:hover {
-    background: rgb(198, 198, 198);
-}
-
-span {
-    background-color: rgb(249, 249, 249);
-    display: inline-block;
-
-    &:first-child {
-        height: 2px;
-        transform: translate(1px, 0px) rotate(pdeg);
-        width: 16px;
-        margin-left: 13px;
-    }
-
-    &:nth-child(2) {
-        height: 16px;
-        transform: translateX(-8.5px) rotate(0deg);
-        width: 2px;
-    }
-}
 `;
 
 const Subtitle = styled.div`
