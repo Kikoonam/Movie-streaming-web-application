@@ -2,10 +2,18 @@ import {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import styled from 'styled-components';
 import db from "../firebase";
+import ReactPlayer from 'react-player';
+
 
 const Detail = (props) => {
+    const [isOpened, setIsOpened] = useState(false);
+
     const { id } = useParams();
     const [ detailData, setDetailData ] = useState({});
+
+    function toggle() {
+        setIsOpened(wasOpened => !wasOpened);
+    }
 
     useEffect(() => {
         db.collection('movies').doc(id).get().then((doc) => {
@@ -39,21 +47,19 @@ const Detail = (props) => {
 
         <ContentMeta>
             <Controls>
-                <Player>
+                <Player onClick={toggle}>
+                {isOpened && (
+                    <Video>
+                        <ReactPlayer url={detailData.trailer} playing={true} width='100%' height='100%'/>
+                    </Video>
+                )}
                      <img class="base64-image" 
                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAG9QTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbeq9RgAAACV0Uk5TAFhqMqr/+o0f8eh6DdVnwlSvQpwv94oc5HcJ0knbQN8MTu9gcy+KIuoAAAB/SURBVHic7dO5EoJAFETRQbkuqKCyKS4g8P/fCJRVJlK8DogsOz7BTE+Pc/984i2WpvFhtd4YaEufYLefRLxzCAUE0VFAcDoLCOJEQKRZbiO4XAsbwe0uIB5fpY0gngIqK+FMrzlup/QkNC68nbCC6T3VA7GWKW3cNa39W34yHdTNCNmD8G7+AAAAAElFTkSuQmCC"
                      alt=""
                      />
                      <span>Play</span>
                 </Player>
-                <Trailer>
-                     <img class="base64-image" 
-                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAEhQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////53h4sAAAABh0Uk5TAHB/IKD/nxDv31+/QK+PMPDA4FCAkLBgyXZ3BwAAAH1JREFUeJztk0cOgDAQA2mG0CG0//8UEIi+eM+IOY8i20kc52fD9XzqBADCiEiYMd67hoU4UUhAmikkIBcb4EghRDtJUwOFJDS4SlODUiHB3JI9SLiN8eBUipNqnsk2tF3V8p06vnjP767mr8AOsrJKQt6N4CXvztDy3/JJRk2aBxl9uYRmAAAAAElFTkSuQmCC"
-                     alt=""
-                     />
-                     <span>Trailer</span>
-                </Trailer>
-            </Controls>
+              </Controls>
             <Subtitle>
                 { detailData.subTitle }             
             </Subtitle>
@@ -64,6 +70,16 @@ const Detail = (props) => {
     </Container>
     );
 };
+
+const Video = styled.div`
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    padding-left:100px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+`;
 
 const Container = styled.div`
 position: relative;
@@ -112,7 +128,7 @@ img{
 `;
 
 const ContentMeta = styled.div`
-max-width: 874px;
+    max-width: 874px;
 `;
 
 const Controls = styled.div`
@@ -160,11 +176,6 @@ img {
 }
 `;
 
-const Trailer = styled(Player)`
-background: rgb(0, 0, 0.3);
-border: 1px solid rgb(249, 249, 249);
-color: rgb(249, 249, 249);
-`;
 
 const Subtitle = styled.div`
 line-height: 1.4;
