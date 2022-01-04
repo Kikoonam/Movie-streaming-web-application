@@ -53,11 +53,10 @@ const Detail = (props) => {
                      />
                      <span>Trailer</span>
                 </Trailer>
-                <AddList>
-                    <span />
-                    <span />
-                </AddList>
             </Controls>
+            <Subtitle>
+                { detailData.subTitle }             
+            </Subtitle>
             <Description>
                 {detailData.description }
             </Description>
@@ -101,7 +100,8 @@ justify-content: flex-start;
 margin: 20px auto;
 height: 30vw;
 min-height: 250px;
-padding-bottom: 24px;
+padding-left:25px;
+padding-bottom: 25px;
 width: 100%;
 
 img{
@@ -166,38 +166,17 @@ border: 1px solid rgb(249, 249, 249);
 color: rgb(249, 249, 249);
 `;
 
-const AddList = styled.div`
-margin-right: 16px;
-height: 44px;
-width: 44px;
-display: flex;
-justify-content; center;
-align-items: center;
-background-color: rgba(0, 0, 0, 0.5);
-border-radius: 50%;
-border: 2px solid white;
-cursor: pointer;
+const Subtitle = styled.div`
+line-height: 1.4;
+font-size: 20px;
+pading: 16px 0px;
+color: rgb(249, 249, 249);
 
-&:hover {
-    background: rgb(198, 198, 198);
-}
+border-radius: 5px;
+margin: 20px;
 
-span {
-    background-color: rgb(249, 249, 249);
-    display: inline-block;
-
-    &:first-child {
-        height: 2px;
-        transform: translate(1px, 0px) rotate(pdeg);
-        width: 16px;
-        margin-left: 13px;
-    }
-
-    &:nth-child(2) {
-        height: 16px;
-        transform: translateX(-8.5px) rotate(0deg);
-        width: 2px;
-    }
+@media (max-width: 600px) {
+    font-size: 14px
 }
 `;
 
@@ -206,7 +185,7 @@ line-height: 1.4;
 font-size: 20px;
 pading: 16px 0px;
 color: rgb(249, 249, 249);
-background-color: rgba(0, 0, 0, 0.5);
+
 border-radius: 5px;
 margin: 20px;
 
