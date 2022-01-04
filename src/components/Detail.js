@@ -101,6 +101,7 @@ justify-content: flex-start;
 margin: 20px auto;
 height: 30vw;
 min-height: 250px;
+padding-left:10px;
 padding-bottom: 24px;
 width: 100%;
 
