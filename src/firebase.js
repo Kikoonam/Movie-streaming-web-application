@@ -3,18 +3,24 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import { getStorage } from "firebase/storage";
-import { initializeApp } from "firebase/app"
 
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCeU11Ra0fMCSSke8WETg_zcfDm6FYCm7w",
-    authDomain: "movie-streaming-server.firebaseapp.com",
-    databaseURL: "https://movie-streaming-server-default-rtdb.firebaseio.com",
-    projectId: "movie-streaming-server",
-    storageBucket: "movie-streaming-server.appspot.com",
-    messagingSenderId: "969779394442",
-    appId: "1:969779394442:web:be759f3cd33d448a153a73",
-    measurementId: "G-MGHKKVY7HW"
+  apiKey: "AIzaSyDuab2XvtdXIDpQCGVAl2ji__TEkrN5e7M",
+  authDomain: "movie-web-app-32269.firebaseapp.com",
+  projectId: "movie-web-app-32269",
+  storageBucket: "movie-web-app-32269.appspot.com",
+  messagingSenderId: "657651419787",
+  appId: "1:657651419787:web:d187fe80b5db1cc45be28e"
 };
+
+
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
