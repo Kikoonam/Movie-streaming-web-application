@@ -48,11 +48,6 @@ const Detail = (props) => {
         <ContentMeta>
             <Controls>
                 <Player onClick={toggle}>
-                {isOpened && (
-                    <Video>
-                        <ReactPlayer url={detailData.trailer} playing={true} width='100%' height='100%'/>
-                    </Video>
-                )}
                      <img class="base64-image" 
                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAG9QTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbeq9RgAAACV0Uk5TAFhqMqr/+o0f8eh6DdVnwlSvQpwv94oc5HcJ0knbQN8MTu9gcy+KIuoAAAB/SURBVHic7dO5EoJAFETRQbkuqKCyKS4g8P/fCJRVJlK8DogsOz7BTE+Pc/984i2WpvFhtd4YaEufYLefRLxzCAUE0VFAcDoLCOJEQKRZbiO4XAsbwe0uIB5fpY0gngIqK+FMrzlup/QkNC68nbCC6T3VA7GWKW3cNa39W34yHdTNCNmD8G7+AAAAAElFTkSuQmCC"
                      alt=""
@@ -60,6 +55,7 @@ const Detail = (props) => {
                      <span>Play</span>
                 </Player>
               </Controls>
+              
             <Subtitle>
                 { detailData.subTitle }             
             </Subtitle>
@@ -67,6 +63,13 @@ const Detail = (props) => {
                 {detailData.description }
             </Description>
      </ContentMeta>
+     {isOpened && (
+       <Video>
+            <ReactPlayer url={detailData.trailer} playing={true} loop={true} width='100%' height='100%'/>
+       
+            </Video>
+    
+    )}
     </Container>
     );
 };
@@ -75,10 +78,10 @@ const Video = styled.div`
     position: absolute;
     bottom: 0;
     top: 0;
-    padding-left:100px;
+    // padding-left:100px;
     width: 100%;
     height: 100%;
-    z-index: 10;
+    z-index: 0;
 `;
 
 const Container = styled.div`
@@ -86,7 +89,7 @@ position: relative;
 min-height: calc(100vh - 250px);
 overflow-x: hidden;
 display: block;
-top: 72px;
+height:900px;
 padding: 0 calc(3.5vm + 5px);
 `;
 
